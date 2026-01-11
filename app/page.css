@@ -911,22 +911,38 @@
   /* Schedule Section - Mobile */
   .schedule-timeline {
     padding-left: 0;
-    max-width: 100%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
   }
 
   .timeline-item {
     padding-left: 0;
     width: 100%;
-    max-width: 500px;
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  /* Ceremony Section - Mobile */
+  .ceremony-details-section .container {
+    padding: 0 1.5rem;
   }
 
   .details-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .detail-card {
+    width: 100%;
+    max-width: 100%;
   }
 
   .gifts-header {
@@ -934,7 +950,7 @@
   }
 
   .gift-image-wrapper {
-    width: 120px;
+    width: 180px;
   }
 
   .venmo-image-wrapper {
