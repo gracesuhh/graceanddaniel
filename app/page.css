@@ -542,6 +542,7 @@
   height: auto;
   aspect-ratio: 1/1;
   object-fit: cover;
+  object-position: center 35%;
   display: block;
   filter: grayscale(100%);
   transition: filter 0.3s ease;

@@ -286,7 +286,7 @@ export default function Home() {
             <div className="gifts-content">
               <div className="gift-image-wrapper gift-image-left">
                 <Image
-                  src="/photos/gifts.jpg"
+                  src="/photos/gifts3.jpg"
                   alt="Gifts"
                   width={400}
                   height={400}
