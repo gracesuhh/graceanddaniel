@@ -13,7 +13,7 @@ export default function Home() {
     {
       question: "Can I bring my kids or a +1?",
       answer:
-        "Your invitation will indicate whether a plus-one has been reserved for you. If you're unable to attend without your kids or a guest, we kindly ask for your understanding. To keep the celebration relaxed and comfortable for everyone, our wedding will be adults only. Thank you so much for understanding — we can't wait to celebrate with you!",
+        "We will be asking for your +1's information, and they will be receiving the invite directly from us via email and will need to RSVP themselves. To keep the celebration relaxed and comfortable for everyone, our wedding will be adults only. Thank you so much for understanding — we can't wait to celebrate with you!",
     },
     {
       question: "Where should I park?",

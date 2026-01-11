@@ -791,7 +791,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-device-width: 768px) {
   /* Home Section - Mobile */
   .hero-content {
     padding: 1.5rem clamp(1rem, 3vw, 2rem);
