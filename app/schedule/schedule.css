@@ -1,0 +1,156 @@
+.schedule-page {
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+.page-title {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+}
+
+.schedule-timeline {
+  max-width: 700px;
+  margin: 0 auto 5rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.schedule-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-accent);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 3rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  border: 3px solid var(--color-secondary);
+}
+
+.timeline-time {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  color: var(--color-text-dark);
+  opacity: 0.8;
+  font-size: 1rem;
+}
+
+.ceremony-details {
+  background: white;
+  padding: 4rem 3rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.detail-card {
+  text-align: center;
+}
+
+.detail-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.detail-card h3 {
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.detail-card p {
+  color: var(--color-text-dark);
+  opacity: 0.8;
+  line-height: 1.7;
+}
+
+.ceremony-image-wrapper {
+  width: 100%;
+  aspect-ratio: 2/1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-top: 2rem;
+}
+
+.ceremony-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.ceremony-image:hover {
+  filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+  .page-title,
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .schedule-timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-item {
+    padding-left: 2rem;
+  }
+
+  .ceremony-details {
+    padding: 3rem 1.5rem;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
