@@ -81,15 +81,9 @@ export default function Home() {
         {/* Our Love Story Section */}
         <section id="love-story" className="section love-story-section">
           <div className="container">
-            <div className="story-content">
-              <h2 className="story-title">
-                OUR
-                <br />
-                LOVE
-                <br />
-                STORY
-              </h2>
+            <h2 className="story-title">OUR LOVE STORY</h2>
 
+            <div className="story-content">
               <div className="story-image-wrapper">
                 <Image
                   src="/photos/ourlovestory.jpg"
@@ -97,22 +91,36 @@ export default function Home() {
                   width={600}
                   height={800}
                   className="story-image"
+                  loading="lazy"
                 />
               </div>
 
               <div className="story-text">
                 <p className="story-paragraph">
-                  Write a paragraph that tells your story as a couple. You can
-                  include details like how you met, your journey together, and
-                  what makes your relationship unique. This is your chance to
-                  share your personality and connect with your guests, giving
-                  them a glimpse into your love story and what this special day
-                  means to you.
+                  To most people's surprise, our love story began when we were
+                  just twelve years old, in middle school band—Daniel in the
+                  back on the drums, and Grace on the flute. We didn't start off
+                  liking each other, though Daniel may have thought Grace was
+                  cute (Grace will neither confirm nor deny). At the time, we
+                  were simply two kids making music and navigating middle
+                  school.
                 </p>
                 <p className="story-paragraph">
-                  You can add more paragraphs here to tell more of your story.
-                  Share memorable moments, adventures you've had together, or
-                  what you're most looking forward to in your future together.
+                  We grew closer toward the end of high school and stayed
+                  friends through college. We didn't hang out often, but when we
+                  did, it felt easy—probably because we already knew each
+                  other's embarrassing phases and life stories. Daniel took a
+                  chance once in college, hoping their friendship might turn
+                  into something more, but timing had other plans. Years later,
+                  while Daniel was in grad school, life gave him a second
+                  opportunity—and this time, Grace said yes.
+                </p>
+                <p className="story-paragraph">
+                  Eight years later, through many seasons of life, that
+                  long-standing friendship has grown into a partnership full of
+                  love, laughter, and patience. Today, we're building a life
+                  together, growing our family with our pup Ceci, and still
+                  grateful that middle school band somehow got it right.
                 </p>
               </div>
             </div>
@@ -130,6 +138,7 @@ export default function Home() {
                   width={600}
                   height={800}
                   className="filler-image"
+                  loading="lazy"
                 />
               </div>
               <div className="filler-image-wrapper filler-image-right">
@@ -139,6 +148,7 @@ export default function Home() {
                   width={600}
                   height={600}
                   className="filler-image"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -159,6 +169,7 @@ export default function Home() {
                     width={80}
                     height={80}
                     className="detail-icon-image"
+                    loading="lazy"
                   />
                 </div>
                 <h3>Ceremony Venue</h3>
@@ -177,6 +188,7 @@ export default function Home() {
                     width={80}
                     height={80}
                     className="detail-icon-image"
+                    loading="lazy"
                   />
                 </div>
                 <h3>Dress Code</h3>
@@ -195,6 +207,7 @@ export default function Home() {
                     width={80}
                     height={80}
                     className="detail-icon-image"
+                    loading="lazy"
                   />
                 </div>
                 <h3>Post-Ceremony</h3>
@@ -256,6 +269,7 @@ export default function Home() {
                   width={800}
                   height={1000}
                   className="schedule-image"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -277,6 +291,7 @@ export default function Home() {
                   width={400}
                   height={400}
                   className="gift-image"
+                  loading="lazy"
                 />
               </div>
 
@@ -303,6 +318,7 @@ export default function Home() {
                       width={200}
                       height={200}
                       className="venmo-image"
+                      loading="lazy"
                     />
                   </div>
                   <div className="payment-info">
@@ -319,6 +335,7 @@ export default function Home() {
                   width={400}
                   height={400}
                   className="gift-image"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -368,6 +385,7 @@ export default function Home() {
                 width={1200}
                 height={800}
                 className="footer-filler-image"
+                loading="lazy"
               />
             </div>
           </div>
