@@ -23,7 +23,7 @@ export default function Home() {
     {
       question: "What is the dress code?",
       answer:
-        "Garden Cocktail - Dress to impress, but keep comfort in mind! Think cocktail-appropriate outfits that are easy to move and dance in.",
+        "Garden Cocktail - Dress to impress, but keep comfort in mind! Think cocktail-appropriate outfits that are easy to move and dance in. Please note there will be some grass, so choose your shoes accordingly.",
     },
     {
       question: "Will the ceremony and reception be indoors or outdoors?",
@@ -396,8 +396,9 @@ export default function Home() {
           <div className="container">
             <h2 className="section-title">RSVP</h2>
             <p className="section-subtitle">
-              We can't wait to celebrate with you! Please let us know if you'll
-              be joining us.
+              We can't wait to celebrate with you!
+              <br></br>Kindly RSVP by February 28 to help us finalize all the
+              details for our big day.
             </p>
 
             <div className="rsvp-form-wrapper">
