@@ -397,7 +397,7 @@ export default function Home() {
             <h2 className="section-title">RSVP</h2>
             <p className="section-subtitle">
               We can't wait to celebrate with you!
-              <br></br>Kindly RSVP by <b>March 28</b> to help us finalize all
+              <br></br>Kindly RSVP by <b>March 21</b> to help us finalize all
               the details for our big day.
             </p>
 
