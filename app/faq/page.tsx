@@ -5,7 +5,7 @@ export default function FAQPage() {
   const faqs = [
     {
       question: 'What time should I arrive?',
-      answer: 'We recommend coming by 4:30 PM so you have time to settle in before the ceremony starts.',
+      answer: 'We recommend coming by 4:45 PM so you have time to settle in before the ceremony starts.',
     },
     {
       question: 'Can I bring my kids or a +1?',

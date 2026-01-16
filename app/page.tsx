@@ -8,7 +8,7 @@ export default function Home() {
     {
       question: "What time should I arrive?",
       answer:
-        "We recommend coming by 4:30 PM so you have time to settle in before the ceremony starts.",
+        "We recommend coming by 4:45 PM so you have time to settle in before the ceremony starts.",
     },
     {
       question: "Can I bring my kids or a +1?",
