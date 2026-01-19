@@ -9,7 +9,7 @@ export default function FAQPage() {
     },
     {
       question: 'Can I bring my kids or a +1?',
-      answer: 'Your invitation will indicate whether a plus-one has been reserved for you. If you\'re unable to attend without your kids or a guest, we kindly ask for your understanding. To keep the celebration relaxed and comfortable for everyone, our wedding will be adults only. Thank you so much for understanding — we can\'t wait to celebrate with you!',
+      answer: 'If your invitation includes a +1, the RSVP form will automatically prompt you for their details. To keep the celebration relaxed and comfortable for everyone, our wedding will be adults only. Thank you so much for understanding — we can\'t wait to celebrate with you!',
     },
     {
       question: 'Where should I park?',

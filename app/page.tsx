@@ -14,7 +14,7 @@ export default function Home() {
     {
       question: "Can I bring my kids or a +1?",
       answer:
-        "We will be asking for your +1's information, and they will be receiving the invite directly from us via email and will need to RSVP themselves. To keep the celebration relaxed and comfortable for everyone, our wedding will be adults only. Thank you so much for understanding — we can't wait to celebrate with you!",
+        "If your invitation includes a +1, the RSVP form will automatically prompt you for their details. To keep the celebration relaxed and comfortable for everyone, our wedding will be adults only. Thank you so much for understanding — we can't wait to celebrate with you!",
     },
     {
       question: "Where should I park?",
