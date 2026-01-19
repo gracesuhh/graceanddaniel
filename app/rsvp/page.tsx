@@ -126,11 +126,15 @@ export default function RSVPPage() {
         setIsSubmitted(true)
         setSubmissionMessage(message)
       } else {
-        throw new Error('Failed to save RSVP')
+        // Try to get error details from response
+        const errorData = await response.json().catch(() => ({}))
+        console.error('RSVP submission failed:', response.status, errorData)
+        throw new Error(errorData.error || errorData.details || `Failed to save RSVP (${response.status})`)
       }
     } catch (error) {
       console.error('Error submitting RSVP:', error)
-      alert('There was an error saving your RSVP. Please try again.')
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+      alert(`There was an error saving your RSVP: ${errorMessage}\n\nPlease check the browser console for more details.`)
     }
   }
 

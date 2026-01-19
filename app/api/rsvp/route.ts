@@ -72,9 +72,16 @@ export async function POST(request: NextRequest) {
         plusOneFirstName: data.plusOneFirstName || '',
         plusOneLastName: data.plusOneLastName || '',
       })
+      console.log('Successfully saved to Google Sheets')
     } catch (sheetsError) {
       // Log error but don't fail the request if Google Sheets fails
-      console.error('Failed to save to Google Sheets (continuing anyway):', sheetsError)
+      // This allows the form to work even if Google Sheets isn't configured
+      const errorMessage = sheetsError instanceof Error ? sheetsError.message : 'Unknown error'
+      console.error('Failed to save to Google Sheets (continuing anyway):', errorMessage)
+      // If it's just missing credentials, that's fine - CSV file was saved
+      if (!errorMessage.includes('GOOGLE_SERVICE_ACCOUNT_CREDENTIALS')) {
+        console.warn('Google Sheets error (non-credential issue):', sheetsError)
+      }
     }
 
     return NextResponse.json({ success: true, message: 'RSVP saved successfully' })
