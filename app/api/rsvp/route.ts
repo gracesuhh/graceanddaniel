@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
-import { appendToGoogleSheets } from '../utils/googleSheets'
+import { appendToGoogleSheets } from '../../utils/googleSheets'
 
 const CSV_FILE_PATH = path.join(process.cwd(), 'rsvp-responses.csv')
 
