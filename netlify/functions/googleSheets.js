@@ -1,4 +1,4 @@
-import { google } from 'googleapis'
+const { google } = require('googleapis')
 
 // Google Sheets configuration
 const SPREADSHEET_ID = '1-KdN836m3I5IKyzPotV0SHwe-Z7zSc04tgkpiTfGBfo'
@@ -18,19 +18,6 @@ const HEADERS = [
   '+1 First Name',
   '+1 Last Name',
 ]
-
-interface RSVPData {
-  firstName: string
-  lastName: string
-  attending: string
-  email: string
-  mailingAddress: string
-  driving: string
-  favoriteSong: string
-  bringingPlusOne: string
-  plusOneFirstName: string
-  plusOneLastName: string
-}
 
 /**
  * Authenticate with Google Sheets API using service account
@@ -59,7 +46,7 @@ async function getAuthClient() {
 /**
  * Append RSVP data to Google Sheets
  */
-export async function appendToGoogleSheets(data: RSVPData): Promise<void> {
+async function appendToGoogleSheets(data) {
   try {
     const auth = await getAuthClient()
     const sheets = google.sheets({ version: 'v4', auth })
@@ -118,3 +105,5 @@ export async function appendToGoogleSheets(data: RSVPData): Promise<void> {
     throw error
   }
 }
+
+module.exports = { appendToGoogleSheets }
