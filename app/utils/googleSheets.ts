@@ -2,7 +2,7 @@ import { google } from 'googleapis'
 
 // Google Sheets configuration
 const SPREADSHEET_ID = '1-KdN836m3I5IKyzPotV0SHwe-Z7zSc04tgkpiTfGBfo'
-const SHEET_NAME = 'Sheet1' // Change if your sheet has a different name
+const SHEET_NAME = 'rsvp responses' // Change if your sheet has a different name
 
 // Headers for the spreadsheet
 const HEADERS = [
