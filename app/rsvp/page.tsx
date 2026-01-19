@@ -54,7 +54,7 @@ export default function RSVPPage() {
         return
       }
       if (formData.attending === 'no') {
-        handleSubmit('Thank you for your response. We\'re sorry you won\'t be able make it!')
+        handleSubmit('Thank you for your response. We\'re so sorry you won\'t be able to join us, but we\'ll be celebrating with you in spirit.')
         return
       }
       // If attending, move to next step
