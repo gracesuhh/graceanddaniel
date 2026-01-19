@@ -3,12 +3,19 @@
   min-height: 100vh;
 }
 
+.rsvp-page .section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .page-title {
   font-size: 3.5rem;
   text-align: center;
   margin-bottom: 1rem;
   color: var(--color-primary);
   letter-spacing: 0.05em;
+  width: 100%;
 }
 
 .page-subtitle {
@@ -18,12 +25,12 @@
   opacity: 0.8;
   margin-bottom: 3rem;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
 
 .rsvp-form-wrapper {
   max-width: 800px;
+  width: 100%;
   margin: 0 auto;
   background: white;
   padding: 2rem;
@@ -38,6 +45,156 @@
   display: block;
 }
 
+/* Custom RSVP Form Styles */
+.rsvp-form {
+  width: 100%;
+}
+
+.form-step {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-step-title {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.required {
+  color: #e74c3c;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-subtext {
+  font-size: 0.9rem;
+  color: var(--color-text-dark);
+  opacity: 0.7;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.radio-group {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--color-text-dark);
+}
+
+.radio-input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--color-accent);
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #c4955f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+  background-color: #f5f5f5;
+  color: var(--color-text-dark);
+}
+
+.btn-secondary:hover {
+  background-color: #e8e8e8;
+}
+
+.submission-success {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.success-message {
+  font-size: 1.2rem;
+  color: var(--color-text-dark);
+  line-height: 1.6;
+}
+
 @media (max-width: 768px) {
   .page-title {
     font-size: 2.5rem;
@@ -50,5 +207,30 @@
   .google-form-iframe {
     min-height: 700px;
   }
-}
 
+  .form-step-title {
+    font-size: 1.1rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .form-subtext {
+    font-size: 0.85rem;
+  }
+}

@@ -1,9 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import './Navigation.css'
 
 export default function Navigation() {
+  const pathname = usePathname()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('#home')
@@ -17,6 +19,12 @@ export default function Navigation() {
   }, [])
 
   useEffect(() => {
+    // If we're on the RSVP page, set active section to RSVP
+    if (pathname === '/rsvp') {
+      setActiveSection('#rsvp')
+      return
+    }
+
     const sections = ['#home', '#love-story', '#ceremony', '#schedule', '#gifts', '#faq', '#rsvp']
     
     const observerOptions = {
@@ -54,25 +62,38 @@ export default function Navigation() {
       observer.disconnect()
       window.removeEventListener('scroll', handleScrollForHome)
     }
-  }, [])
+  }, [pathname])
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
     setIsMobileMenuOpen(false)
     
     if (href === '#home') {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+      if (pathname === '/rsvp') {
+        // If on RSVP page, navigate to home page
+        window.location.href = '/'
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }
+    } else if (href === '#rsvp') {
+      // Navigate to RSVP page
+      window.location.href = '/rsvp'
     } else {
-      const element = document.querySelector(href)
-      if (element) {
-        const offset = 80 // Account for fixed navbar
-        const elementPosition = element.getBoundingClientRect().top
-        const offsetPosition = elementPosition + window.pageYOffset - offset
+      // If on RSVP page, navigate to home first, then scroll
+      if (pathname === '/rsvp') {
+        window.location.href = `/${href}`
+      } else {
+        const element = document.querySelector(href)
+        if (element) {
+          const offset = 80 // Account for fixed navbar
+          const elementPosition = element.getBoundingClientRect().top
+          const offsetPosition = elementPosition + window.pageYOffset - offset
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        })
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          })
+        }
       }
     }
   }

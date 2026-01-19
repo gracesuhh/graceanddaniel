@@ -1,6 +1,7 @@
 import Navigation from "./components/Navigation";
 import Countdown from "./components/Countdown";
 import Image from "next/image";
+import Link from "next/link";
 import "./page.css";
 
 export default function Home() {
@@ -394,18 +395,26 @@ export default function Home() {
               the details for our big day.
             </p>
 
-            <div className="rsvp-form-wrapper">
-              <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSdJ4n0V3aSL-cx1Fi3TFNR6xCrEhNgtSZ259SF5CaXVlVmNiA/viewform?embedded=true"
-                width="100%"
-                height="586"
-                frameBorder="0"
-                marginHeight={0}
-                marginWidth={0}
-                className="google-form-iframe"
-              >
-                Loading…
-              </iframe>
+            <div className="rsvp-options-wrapper">
+              <div className="rsvp-button-wrapper">
+                <Link href="/rsvp" className="rsvp-button">
+                  RSVP Now
+                </Link>
+              </div>
+              <div className="rsvp-form-wrapper">
+                <p className="rsvp-form-note">Or use the form below:</p>
+                <iframe
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSdJ4n0V3aSL-cx1Fi3TFNR6xCrEhNgtSZ259SF5CaXVlVmNiA/viewform?embedded=true"
+                  width="100%"
+                  height="586"
+                  frameBorder="0"
+                  marginHeight={0}
+                  marginWidth={0}
+                  className="google-form-iframe"
+                >
+                  Loading…
+                </iframe>
+              </div>
             </div>
           </div>
         </section>
