@@ -34,8 +34,10 @@ export default function RSVPPage() {
 
   const checkIfOnPlusOneList = () => {
     const fullName = `${formData.firstName} ${formData.lastName}`.trim()
+    // Normalize both strings: trim, lowercase, and remove extra spaces
+    const normalizedFullName = fullName.toLowerCase().replace(/\s+/g, ' ').trim()
     return PLUS_ONE_LIST.some(
-      (name) => name.toLowerCase() === fullName.toLowerCase()
+      (name) => name.toLowerCase().replace(/\s+/g, ' ').trim() === normalizedFullName
     )
   }
 
