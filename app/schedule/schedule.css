@@ -1,6 +1,12 @@
 .schedule-page {
   padding-top: 80px;
+  padding-bottom: 4rem;
   min-height: 100vh;
+}
+
+.schedule-page .section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .page-title {
