@@ -234,6 +234,13 @@ export default function Home() {
 
                 <div className="schedule-timeline">
                   <div className="timeline-item">
+                    <div className="timeline-time">4:30 PM</div>
+                    <div className="timeline-content">
+                      <h3>Champagne Welcome</h3>
+                    </div>
+                  </div>
+
+                  <div className="timeline-item">
                     <div className="timeline-time">5:00 PM</div>
                     <div className="timeline-content">
                       <h3>Ceremony</h3>

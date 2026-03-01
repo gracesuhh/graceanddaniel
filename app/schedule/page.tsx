@@ -15,7 +15,7 @@ export default function SchedulePage() {
               <div className="timeline-item">
                 <div className="timeline-time">4:30 PM</div>
                 <div className="timeline-content">
-                  <h3>Arrival & Welcome</h3>
+                  <h3>Champagne Welcome</h3>
                   <p>Guests arrive and are welcomed</p>
                 </div>
               </div>
