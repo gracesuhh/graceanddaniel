@@ -1,11 +1,17 @@
+import type { ReactNode } from "react";
 import Navigation from "./components/Navigation";
 import Countdown from "./components/Countdown";
 import Image from "next/image";
 import Link from "next/link";
 import "./page.css";
 
+type FAQ = {
+  question: string;
+  answer: string | ReactNode;
+};
+
 export default function Home() {
-  const faqs = [
+  const faqs: FAQ[] = [
     {
       question: "What time should I arrive?",
       answer:
@@ -30,6 +36,37 @@ export default function Home() {
       question: "Will the ceremony and reception be indoors or outdoors?",
       answer:
         "Both the ceremony and reception will be held outdoors in a beautiful garden setting. Please dress accordingly for the weather.",
+    },
+    {
+      question: "Is there a hotel we can stay at nearby?",
+      answer: (
+        <>
+          <p>
+            We are blocking Ayres Suites hotel near Ontario airport. You can
+            book through{" "}
+            <a
+              href="https://reservations.travelclick.com/12633?groupID=5211115"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              this link
+            </a>{" "}
+            under Grace &amp; Daniel&apos;s Wedding. The block will last until
+            4/9. You may still book at the hotel after 4/9, but our rates may
+            change.
+          </p>
+          <p>
+            The hotel offers complimentary breakfast and parking. It also
+            offers complimentary scheduled shuttle rides to and from Ontario
+            International Airport as well as to and from The Christmas House
+            on day of wedding if enough parties have booked. We will let you
+            know closer to the date for those who&apos;ve booked at the hotel.
+          </p>
+          <p>
+            Please reach out to Grace or Daniel if you have any questions!
+          </p>
+        </>
+      ),
     },
   ];
 
@@ -175,9 +212,16 @@ export default function Home() {
                 </div>
                 <h3>Ceremony Venue</h3>
                 <p>
-                  We've chosen to host a backyard-style wedding where we'll
-                  celebrate with all of our loved ones at The Christmas House
-                  Inn & Gardens.
+                  We&apos;ve chosen to host a backyard-style wedding where
+                  we&apos;ll celebrate with all of our loved ones at{" "}
+                  <a
+                    href={`https://www.google.com/maps/place/Christmas+House+Inn+%26+Gardens/@34.0856975,-117.5962917,17z/data=!3m1!4b1!4m6!3m5!1s0x80c335caf7268181:0xe343d33b8254258!8m2!3d34.0856931!4d-117.5937168!16s%2Fg%2F1tn061tx?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    The Christmas House Inn &amp; Gardens
+                  </a>{" "}
+                  at 9240 Archibald Ave, Rancho Cucamonga, CA 91730.
                 </p>
               </div>
 
@@ -363,7 +407,7 @@ export default function Home() {
                     </div>
                     <div className="faq-content">
                       <h3 className="faq-question">{faq.question}</h3>
-                      <p className="faq-answer">{faq.answer}</p>
+                      <div className="faq-answer">{faq.answer}</div>
                     </div>
                   </div>
                 ))}

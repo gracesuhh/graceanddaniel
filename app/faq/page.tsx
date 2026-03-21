@@ -1,8 +1,14 @@
+import type { ReactNode } from 'react'
 import Navigation from '../components/Navigation'
 import './faq.css'
 
+type FAQ = {
+  question: string
+  answer: string | ReactNode
+}
+
 export default function FAQPage() {
-  const faqs = [
+  const faqs: FAQ[] = [
     {
       question: 'What time should I arrive?',
       answer: 'We recommend coming by 4:45 PM so you have time to settle in before the ceremony starts.',
@@ -23,6 +29,28 @@ export default function FAQPage() {
       question: 'Will the ceremony and reception be indoors or outdoors?',
       answer: 'Both the ceremony and reception will be held outdoors in a beautiful garden setting. Please dress accordingly for the weather.',
     },
+    {
+      question: 'Is there a hotel we can stay at nearby?',
+      answer: (
+        <>
+          <p>
+            We are blocking Ayres Suites hotel near Ontario airport. You can book through{' '}
+            <a
+              href="https://reservations.travelclick.com/12633?groupID=5211115"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              this link
+            </a>{' '}
+            under Grace &amp; Daniel&apos;s Wedding. The block will last until 4/9. You may still book at the hotel after 4/9, but our rates may change.
+          </p>
+          <p>
+            The hotel offers complimentary breakfast and parking. It also offers complimentary scheduled shuttle rides to and from Ontario International Airport as well as to and from The Christmas House on day of wedding if enough parties have booked. We will let you know closer to the date for those who&apos;ve booked at the hotel.
+          </p>
+          <p>Please reach out to Grace or Daniel if you have any questions!</p>
+        </>
+      ),
+    },
   ]
 
   return (
@@ -39,7 +67,7 @@ export default function FAQPage() {
                   <div className="faq-number">{String(index + 1).padStart(2, '0')}</div>
                   <div className="faq-content">
                     <h3 className="faq-question">{faq.question}</h3>
-                    <p className="faq-answer">{faq.answer}</p>
+                    <div className="faq-answer">{faq.answer}</div>
                   </div>
                 </div>
               ))}

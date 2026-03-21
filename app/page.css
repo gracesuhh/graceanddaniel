@@ -475,6 +475,16 @@
   line-height: 1.7;
 }
 
+.detail-card p a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.detail-card p a:hover {
+  opacity: 0.85;
+}
+
 .ceremony-image-wrapper {
   width: 100%;
   aspect-ratio: 2/1;
@@ -681,6 +691,20 @@
   color: var(--color-text-dark);
   opacity: 0.8;
   line-height: 1.7;
+}
+
+.faq-answer p + p {
+  margin-top: 1em;
+}
+
+.faq-answer a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.faq-answer a:hover {
+  opacity: 0.85;
 }
 
 .faq-footer {

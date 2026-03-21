@@ -56,6 +56,20 @@
   line-height: 1.7;
 }
 
+.faq-answer p + p {
+  margin-top: 1em;
+}
+
+.faq-answer a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.faq-answer a:hover {
+  opacity: 0.85;
+}
+
 .faq-footer {
   text-align: center;
   margin-top: 4rem;
